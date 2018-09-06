@@ -8,3 +8,4 @@ tfe.enable_eager_execution()
 
 import tensorflow as tf
 
+print('Eager exe: Add:', tf.add(5, 2))
