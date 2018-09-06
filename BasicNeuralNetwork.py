@@ -19,5 +19,5 @@ with tf.Session() as session:
     tf.global_variables_initializer().run(session=session)
     feed_dict = {x: [[0.25, 0.15]]}
     output = session.run(out, feed_dict=feed_dict)
-
+    print('Values in Weight:', session.run(W))
     print('output:', output)
