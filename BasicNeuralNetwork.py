@@ -13,6 +13,9 @@ z = tf.matmul(x, W)
 out = tf.sigmoid(z)
 
 with tf.Session() as session:
+    # Only after running tf.global_variables_initializer() in a session
+    # then only  your variables hold the values we told them to hold
+    # when you declare them (tf.Variable(tf.zeros(...)), tf.Variable(tf.random_normal(...)),...).
     tf.global_variables_initializer().run(session=session)
     feed_dict = {x: [[0.25, 0.15]]}
     output = session.run(out, feed_dict=feed_dict)
