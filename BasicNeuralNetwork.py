@@ -5,6 +5,11 @@ n_output_nodes = 1
 #Inputs
 x = tf.placeholder(tf.float32, (None, n_input_nodes))
 # Weights
+# tf.ones(
+#     shape,(2, 1) => 2 dimensions and length of each dimension
+#     dtype=tf.float32,
+#     name=None
+# )
 W = tf.Variable(tf.ones((n_input_nodes, n_output_nodes)), dtype=tf.float32)
 # Bias = Threshold
 b = tf.Variable(tf.zeros(n_output_nodes), dtype=tf.float32)
